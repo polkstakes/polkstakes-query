@@ -1,6 +1,11 @@
-import {
-  SubstrateEvent,
-} from "@subql/types";
+import { SubstrateEvent, SubstrateBlock } from "@subql/types";
+import { PolkstakesData } from "../types";
+
+export async function handleBlock(block: SubstrateBlock): Promise<void> {
+  let record = new PolkstakesData(block.block.header.hash.toString());
+  record.blockName = block.block.header.number.toString();
+  await record.save();
+}
 
 export async function handleCouncilVotedEvent(
   event: SubstrateEvent

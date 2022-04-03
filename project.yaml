@@ -14,6 +14,8 @@ dataSources:
     mapping:
       file: ./dist/index.js
       handlers:
+        - handler: handleBlock
+          kind: substrate/BlockHandler
         - handler: handleCouncilVotedEvent
           kind: substrate/EventHandler
           filter:
