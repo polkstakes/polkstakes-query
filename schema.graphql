@@ -1,0 +1,7 @@
+type PolkstakesData @entity {
+  id: ID!
+
+  blockName: String
+
+  votes: Int
+}

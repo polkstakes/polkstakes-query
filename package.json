@@ -1,0 +1,25 @@
+{
+    "name": "polkstakes",
+    "version": "0.0.1",
+    "description": "Polkstakes subquery engine",
+    "main": "dist/index.js",
+    "scripts": {
+      "build": "tsc -b",
+      "prepack": "rm -rf dist && npm build",
+      "test": "jest",
+      "codegen": "subql codegen"
+    },
+    "homepage": "https://github.com/polkstakes/polkstakes-subquery",
+    "repository": "github:polkstakes/polkstakes-subquery",
+    "files": [
+      "dist",
+      "schema.graphql",
+      "project.yaml"
+    ],
+    "devDependencies": {
+      "@polkadot/api": "^7",
+      "@subql/types": "latest",
+      "typescript": "^4.1.3",
+      "@subql/cli": "latest"
+    }
+  }
